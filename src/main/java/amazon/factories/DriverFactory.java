@@ -12,9 +12,12 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Slf4j
 public class DriverFactory {
+	private static final Logger log= LoggerFactory.getLogger(DriverFactory.class);
     private static Config config = EnvFactory.getInstance().getConfig();
     private static final Host HOST = Host.parse(config.getString("HOST"));
     private static final Browser BROWSER = Browser.parse(config.getString("BROWSER"));

@@ -8,9 +8,13 @@ import lombok.extern.slf4j.Slf4j;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @Slf4j
 public class URLFactory {
     private static Config config = EnvFactory.getInstance().getConfig();
+    private static final Logger log= LoggerFactory.getLogger(URLFactory.class);
 
     private URLFactory() {
         throw new IllegalStateException("Static factory class");
